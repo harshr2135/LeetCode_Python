@@ -3,9 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=harshr2135&label=Profile%20views&color=0e75b6&style=flat" alt="harshr2135" /> </p>
 
-- 🌱 I’m currently learning **python**
-
-- 👨‍💻 All of my projects are available at [https://www.linkedin.com/in/m-harshith-raju-a31897291/](https://www.linkedin.com/in/m-harshith-raju-a31897291/)
+- 🌱 I’m currently learning **Python**
 
 - 📫 How to reach me **harshithm2135@outlook.com**
 
