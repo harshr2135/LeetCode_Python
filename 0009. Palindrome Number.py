@@ -3,3 +3,17 @@ class Solution:
 
         s = str(x)
         return s == s[::-1]
+    
+# class Solution:
+#     def isPalindrome(self, x: int) -> bool:
+#         if x < 0:
+#             return False
+
+#         rev = 0
+#         y = x
+
+#         while y:
+#             rev = rev * 10 + y % 10
+#             y //= 10
+
+#         return rev == x
