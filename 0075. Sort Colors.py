@@ -3,9 +3,17 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        left, mid, right = 0, 0, len(nums)-1
 
-        for i in range(len(nums)):
-            for j in range(len(nums)):
-                if nums[i]<nums[j]:
-                    nums[i], nums[j] = nums[j], nums[i]
-        
+        while mid<=right:
+            if nums[mid]==0:
+                nums[left], nums[mid] = nums[mid], nums[left]
+                left += 1
+                mid += 1
+
+            elif nums[mid]==1:
+                mid += 1
+
+            else:
+                nums[mid], nums[right] = nums[right], nums[mid]
+                right -= 1
