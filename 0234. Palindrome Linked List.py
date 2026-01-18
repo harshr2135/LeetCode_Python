@@ -4,34 +4,37 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def isPalindrome(self, head: ListNode) -> bool:
-        def reverseList(head: ListNode) -> ListNode:
-            prev = None
-            curr = head
+    def reverseList(self, head):
+        prev = None
+        curr = head
 
-            while curr:
-                next = curr.next
-                curr.next = prev
-                prev = curr
-                curr = next
+        while curr:
+            nextNode = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nextNode
 
-            return prev
+        return prev
+
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        if not head or not head.next:
+            return True
 
         slow = head
         fast = head
-
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
 
-        if fast:
-            slow = slow.next
-        slow = reverseList(slow)
+        revSecondHalf = self.reverseList(slow)
 
-        while slow:
-            if slow.val != head.val:
+        firstHalf = head
+
+        while revSecondHalf:
+            if firstHalf.val != revSecondHalf.val:
                 return False
-            slow = slow.next
-            head = head.next
+            
+            firstHalf = firstHalf.next
+            revSecondHalf = revSecondHalf.next
 
         return True
